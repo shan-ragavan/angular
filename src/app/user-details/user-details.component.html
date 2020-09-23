@@ -1,0 +1,28 @@
+<h2>User Details</h2>
+<hr/>
+<div class="spinner-border text-info" role="status" *ngIf="loading">
+  <span class="sr-only">Loading...</span>
+</div>
+<div *ngIf="user && !loading">
+  <div>
+    <label><b>Username: </b></label> {{user.userName}}
+  </div>
+  <div>
+    <label><b>First Name: </b></label> {{user.firstName}}
+  </div>
+  <div>
+    <label><b>Last Name: </b></label> {{user.lastName}}
+  </div>
+  <div>
+    <label><b>Contact Number: </b></label> {{user.contactNumber}}
+  </div>
+  <div>
+    <label><b>Email Id: </b></label> {{user.emailId}}
+  </div>
+  <div>
+    <label><b>Address: </b></label> {{user.address}}
+  </div>
+</div>
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to User List</button><br>
